@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Task
+from .models import ToDo
 
-def task_list(request):
-    tasks = Task.objects.all()
-    return render(request, 'to_do_list/task_list.html', {'tasks': tasks})
+def todo_list(request):
+    todos = ToDo.objects.all()
+    return render(request, 'to_do_list/todo_list.html', {'todos': todos})

@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import BlogPost
+from .models import BlogPost 
 
-def blog_list(request):
-    posts = BlogPost.objects.all()
-    return render(request, 'blog/blog_list.html', {'posts': posts})
+def blog_posts(request):
+    posts = BlogPost.objects.all()  
+    return render(request, 'blog/blog_posts.html', {'posts': posts})

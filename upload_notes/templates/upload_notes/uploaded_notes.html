@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Notes</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #333; }
+        .note { background-color: #f4f4f4; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+        .note h2 { color: #333; }
+        .note a { color: #0066cc; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Uploaded Notes</h1>
+    {% for note in notes %}
+        <div class="note">
+            <h2>{{ note.title }}</h2>
+            <p>Uploaded on: {{ note.uploaded_at }}</p>
+            <a href="{{ note.file.url }}" download>Download Note</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
